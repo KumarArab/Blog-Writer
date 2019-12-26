@@ -1,0 +1,15 @@
+<%- include("partials/header")-%>
+
+<h1>Home</h1>
+<p>Hey there gorgeous people out there,this is a personal blogging website where you can write about your day and keep a record of all the happenings of your past experiences.So get onto your keyboard and start typing out your heart and you can create unlimited number of posots any day so be specific with everyday so that it would be easy for you to search any event in future."</p>
+<% blogData.forEach(function(blog){ %>
+  <% var link = "/posts/"+blog.topic %>
+  <h3><%= blog.topic %></h3>
+  <p><%= blog.body.substring(0,100) %>...
+  <a href="/posts/<%= blog.topic%>">Read More</a>
+  </p>
+
+<% }); %>
+
+
+<%- include("partials/footer")-%>
